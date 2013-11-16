@@ -1,0 +1,21 @@
+html figure.code {
+
+  .highlight {
+    pre.line-numbers, code {
+      font-family: Monaco, Consolas, "Liberation Mono", Courier, monospace;
+      font-size: 14px !important;
+      line-height: 21px !important;
+    }
+
+    code .n {
+      color: $base01 !important;
+    }
+    code .ss {
+      color: #679cbe !important;
+    }
+    code .c, code .cm, code .cp, code .c1, code .cs {
+      color: #bc9457 !important;
+    }
+  }
+
+}

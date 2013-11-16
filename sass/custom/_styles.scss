@@ -1,2 +1,36 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+
+html {
+  background: image-url('background-road-scotland.jpg') bottom center no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+
+  #main {
+    opacity: 0.8;
+  }
+
+  header {
+    background: transparent;
+  }
+
+  footer[role=contentinfo] {
+    margin-top: 10px;
+    height: 15px;
+    line-height: 15px;
+  }
+
+  nav {
+    margin-bottom: 10px;
+  }
+
+  nav, footer[role=contentinfo] {
+    background: #ccc;
+    opacity: 0.4;
+    border-radius: 5px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
