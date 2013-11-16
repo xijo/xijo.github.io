@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[✌]]></title>
+  <link href="http://xijo.github.io/atom.xml" rel="self"/>
+  <link href="http://xijo.github.io/"/>
+  <updated>2013-10-30T23:41:02+01:00</updated>
+  <id>http://xijo.github.io/</id>
+  <author>
+    <name><![CDATA[Johannes Opper]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[I always hated blogs]]></title>
+    <link href="http://xijo.github.io/blog/2013/10/30/i-always-hated-blogs/"/>
+    <updated>2013-10-30T23:26:00+01:00</updated>
+    <id>http://xijo.github.io/blog/2013/10/30/i-always-hated-blogs</id>
+    <content type="html"><![CDATA[<p>That&rsquo;s true! I never knew why the hack someone would read and care pagewise stuff I write. But now, accidently it&rsquo;s fun
+because now I got octothing that makes my life so easy and enjoyable, hurray!</p>
+
+<p>The question now is: how long does it last and will there be one post to make it to production?</p>
+
+<!-- more -->
+
+
+<p>My gut feeling tells me &ldquo;Maybe&rdquo;! So let&rsquo;s just see :)</p>
+]]></content>
+  </entry>
+  
+</feed>
