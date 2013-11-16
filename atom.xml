@@ -1,33 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[✌]]></title>
+  <title><![CDATA[✗ijo]]></title>
   <link href="http://xijo.github.io/atom.xml" rel="self"/>
   <link href="http://xijo.github.io/"/>
-  <updated>2013-10-30T23:41:02+01:00</updated>
+  <updated>2013-11-16T13:29:59+01:00</updated>
   <id>http://xijo.github.io/</id>
   <author>
     <name><![CDATA[Johannes Opper]]></name>
-    
+
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
+
   <entry>
-    <title type="html"><![CDATA[I always hated blogs]]></title>
-    <link href="http://xijo.github.io/blog/2013/10/30/i-always-hated-blogs/"/>
-    <updated>2013-10-30T23:26:00+01:00</updated>
-    <id>http://xijo.github.io/blog/2013/10/30/i-always-hated-blogs</id>
-    <content type="html"><![CDATA[<p>That&rsquo;s true! I never knew why the hack someone would read and care pagewise stuff I write. But now, accidently it&rsquo;s fun
-because now I got octothing that makes my life so easy and enjoyable, hurray!</p>
+    <title type="html"><![CDATA[Mind your helm]]></title>
+    <link href="http://xijo.github.io/blog/2013/11/05/mind-your-helm/"/>
+    <updated>2013-11-05T08:35:00+01:00</updated>
+    <id>http://xijo.github.io/blog/2013/11/05/mind-your-helm</id>
+    <content type="html"><![CDATA[<p>I really like the abstraction for menus that twitter bootstrap makes: take an <code>ul</code>, spice with some classes and wrap your links in <code>li</code> elements.</p>
 
-<p>The question now is: how long does it last and will there be one post to make it to production?</p>
+<p>In order to build more and larger menus I wanted to have a small helper for the most common cases. Therefore an entry should be:</p>
 
-<!-- more -->
+<ol>
+<li> Visible or invisible based on a condition</li>
+<li> Disabled and show a tooltip based on a condition</li>
+<li> Able to have a submenu</li>
+<li> Find out if it should be highlighted</li>
+</ol>
 
 
-<p>My gut feeling tells me &ldquo;Maybe&rdquo;! So let&rsquo;s just see :)</p>
+<p>So I wrote a little gem called <code>helmsman</code> and you can find out how it works on the <a href="https://github.com/xijo/helmsman">github page</a>.</p>
+
+<p>For <a href="http://betterplace.org">betterplace</a> we made some nice menus and submenus and I want to share how we did that with you.</p>
+
+<p>For a project manager it should be possible to enter translations in all supported locales, so we wanted to have a submenu to select and highlight which locale the manager wants to edit.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1"># Stolen from projects/_admin_sidebar.html.slim</span>
+</span><span class='line'><span class="o">-</span> <span class="n">helm</span> <span class="ss">:translations</span><span class="p">,</span> <span class="ss">url</span><span class="p">:</span> <span class="n">project_translations_url</span><span class="p">(</span><span class="n">project</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">entry</span><span class="o">|</span>
+</span><span class='line'>  <span class="o">-</span> <span class="k">if</span> <span class="n">entry</span><span class="o">.</span><span class="n">current?</span>
+</span><span class='line'>    <span class="n">ul</span>
+</span><span class='line'>      <span class="o">-</span> <span class="no">AppConfig</span><span class="o">.</span><span class="n">locales</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">locale</span><span class="o">|</span>
+</span><span class='line'>        <span class="o">=</span> <span class="n">helm</span> <span class="ss">:&quot;translation_</span><span class="si">#{</span><span class="n">locale</span><span class="si">}</span><span class="ss">&quot;</span><span class="p">,</span> <span class="ss">url</span><span class="p">:</span> <span class="p">(</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="p">),</span> <span class="ss">current</span><span class="p">:</span> <span class="n">is_current_locale?</span>
+</span></code></pre></td></tr></table></div></figure>
+
 ]]></content>
   </entry>
-  
+
 </feed>
